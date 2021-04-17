@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
+    if(Auth::check()){return Redirect::to('home');}
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostController@index')->name('home');
+
+Route::get('/profile', 'PostController@show');
+
