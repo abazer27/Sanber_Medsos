@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use app\article;
+use app\comment;
 use DB;
 class PostController extends Controller
 {

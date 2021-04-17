@@ -18,10 +18,12 @@ class ProfileController extends Controller
 
         $request->validate([
             'biodata' => 'required',
+            'foto' => 'required'
         ]);
 
         $profile = profile::where('id' , $id)->update([
         'biodata'  => $request['biodata'],
+        'foto' => $request['foto']
 
         ]);
         return  redirect('profiles.index');
