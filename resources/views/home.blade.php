@@ -10,7 +10,7 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td><img src="#" class="rounded-circle" style="width: 50px"></td>
+                                    <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 50px"></td>
                                     <td class="ps-3 align-middle"><a href="#" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
                                 </tr>
                             </tbody>
@@ -47,7 +47,7 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td><img src="resources\img\Screenshot (1038).png" class="rounded-circle" style="width: 30px"></td>
+                                    <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 30px"></td>
                                     <td class="ps-2 align-middle"><a href="/profile" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
                                     <td></td>
                                 </tr>
@@ -56,14 +56,14 @@
                     </div>
                     <div class="card-body">
                       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, amet culpa sed eligendi itaque harum pariatur quam magnam id rerum omnis libero officia maiores odio blanditiis in adipisci quisquam placeat?</p>
-                      <img src="{{Auth::user()->profiles->profile_image}}" style="height: 300px" class="mx-auto d-block">
+                      <img src="{{Auth::user()->profile->profile_image}}" style="height: 300px" class="mx-auto d-block">
                       <!-- list comment -->
                         <div class="card mt-3">
                             <div class="card-header">
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td><img src="resources\img\Screenshot (1038).png" class="rounded-circle" style="width: 30px"></td>
+                                            <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 30px"></td>
                                             <td class="ps-2 align-middle"><a href="{{route('profiles.index')}}" class="text-dark" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
                                         </tr>
                                     </tbody>

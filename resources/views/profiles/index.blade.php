@@ -6,7 +6,7 @@
         <tbody>
             <tr>
                 <!-- profile -->
-                <td rowspan="3"><img src="resources\img\Screenshot (1038).png" class="rounded" style="width: 200px"></td>
+                <td rowspan="3"><img src="{{Auth::user()->profile->profile_image}}" class="rounded" style="width: 200px"></td>
                 <td class="fs-2 ps-3">{{ Auth::user()->name }}</td>
             </tr>
             <tr>
