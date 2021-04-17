@@ -11,7 +11,7 @@
                             <tbody>
                                 <tr>
                                     <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 50px"></td>
-                                    <td class="ps-3 align-middle"><a href="#" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
+                                    <td class="ps-3 align-middle"><a href="{{route('profiles.index')}}" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
                                 </tr>
                             </tbody>
                         </table>
