@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\profile;
+use App\profile;
+use Auth;
 class ProfileController extends Controller
+
 {
-    public function index($id){
-        $profile = profile::find($id);
-        return view('profile.index');
+    public function index(){
+        $profile = profile::all();
+        return view('profiles.index',compact ('profile'));
     }
     public function edit($id){
         $profile = profile::find($id);
-        return view('profiles.edit');
+        return view('profiles.edit',compact ('profile'));
     }
     public function update($id, Request $request){
 
