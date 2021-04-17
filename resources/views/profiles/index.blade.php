@@ -6,16 +6,16 @@
         <tbody>
             <tr>
                 <!-- profile -->
-                <td rowspan="3"><img src="{{Auth::user()->profile->profile_image}}" class="rounded" style="width: 200px"></td>
-                <td class="fs-2 ps-3">{{ Auth::user()->name }}</td>
+                <td rowspan="3" style="width: 200px"><img src="{{Auth::user()->profile->profile_image}}" class="rounded" style="width: 200px"></td>
+                <td class="fs-2 ps-3 ">{{ Auth::user()->name }}</td>
             </tr>
             <tr>
                 <!-- bio -->
-                <td class="ps-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed veniam accusantium, numquam fugiat quod commodi saepe deserunt optio perspiciatis quos illo minima ullam, officiis rerum? Animi deleniti maiores explicabo libero.</td>
+                <td class="ps-3">{{Auth::user()->profile->biodata}}</td>
             </tr>
             <tr>
                 <!-- followers/ing -->
-                <td class="ps-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi voluptatem soluta ipsum dolore quasi commodi molestiae at dicta nam? Eum obcaecati necessitatibus fuga ea repellat, assumenda temporibus cupiditate sed voluptatum?</td>
+                <td class="ps-3"></td>
             </tr>
             <tr>
                 <a class="" href="{{route('profiles.edit' ,'$id')}}">Update Profile</a>
