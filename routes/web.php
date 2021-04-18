@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
+    if(Auth::check()){return Redirect::to('home');}
     return view('welcome');
 });
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('article', 'PostController');
+
 Route::resource('profiles', 'ProfileController');
+
