@@ -17,9 +17,17 @@
                 <!-- followers/ing -->
                 <td class="ps-3"></td>
             </tr>
+            
             <tr>
-                <a class="" href="{{route('profiles.edit' ,'$id')}}">Update Profile</a>
+                @guest
+                    <a href="" class="btn btn-danger" role="button">Follow</a>
+                    @else
+                    <a class="btn btn-warning mb-3" role="button" href="{{route('profiles.edit' ,'$id')}}">Update Profile</a>
+                @endguest
+                
             </tr>
+                <td class="p-2">Follower <br> Jumlah</td>
+                <td class="p-2">Following <br> Jumlah</td>
             <tr>
                 <td colspan="2">
                     <!-- post -->

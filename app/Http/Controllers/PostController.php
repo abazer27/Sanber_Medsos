@@ -9,11 +9,22 @@ use DB;
 class PostController extends Controller
 {
     public function create(){
-        return view('articles.create');
+        return view('home');
     }
 
     public function store(Request $request){
 
+        // $this->validate($request,[
+    	// 	'blog' => 'required',
+    	// 	'image' => 'required',
+        //     'like' => 'required'
+    	// ]);
+ 
+        // Article::create([
+    	// 	'blog' => $request->title,
+    	// 	'image' => $request->image,
+        //     'like' => $request->like
+    	// ]);
         $request->validate([
             'blog' => 'required',
             'image' => 'required',

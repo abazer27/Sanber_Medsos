@@ -29,12 +29,12 @@
                                         </ul>
                                     </div>
                                 @endif
-                                <form action="{{Auth::user()->profile->id}}" method="POST" role="form" enctype="multipart/form-data">
+                                <form action="profile/{{Auth::user()->profile->id}}" method="POST" role="form" enctype="multipart/form-data">
                                     @csrf
                                     @method('put')
                                     <div class="form-group row">
                                         <label for="exampleFormControlTextarea1">Biodata</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" name="bio" value='{{Auth::user()->profile->bio}}' rows="3"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" name="biodata"  value='{{Auth::user()->profile->bio}}' rows="3"></textarea>
                                       </div>
                                     <div class="form-group row">
                                         <label for="profile_image" class="col-md-4 col-form-label text-md-right">Profile Image</label>

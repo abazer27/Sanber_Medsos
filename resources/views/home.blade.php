@@ -16,7 +16,7 @@
                             </tbody>
                         </table>
                     </li>
-                    <li class="list-group-item">Mengikuti</li>
+                    <li class="list-group-item">Mengikuti <span class="text-end"> a</span></li>
                     <li class="list-group-item">Pengikut</li>
                     <li class="list-group-item">Profile</li>
                 </ul>
@@ -25,15 +25,15 @@
         <!-- create post -->
         <div class="col-md">
             <div>
-                <form action="/create" class="row gy-2 gx-3 align-items-center" method="POST">
+                <form action="/article" class="row gy-2 gx-3 align-items-center" method="POST">
                     @csrf
                     <table>
                         <tbody>
                             <tr>
-                                <td colspan="2"><textarea class="form-control" name="post" rows="3" placeholder="Apa yang Anda pikirkan?" style="resize: none;"></textarea></td>
+                                <td colspan="2"><textarea class="form-control" type="text" name="blog" rows="3" placeholder="Apa yang Anda pikirkan?" style="resize: none;"></textarea></td>
                             </tr>
                             <tr>
-                                <td><input id="profile_image" type="file" class="form-control" name="post_image"></td>
+                                <td><input id="profile_image" type="file" class="form-control" name="image"></td>
                                 <td class="text-end"><button type="submit" class="btn btn-primary">Post</button></td>
                             </tr>
                         </tbody>
@@ -48,7 +48,7 @@
                             <tbody>
                                 <tr>
                                     <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 30px"></td>
-                                    <td class="ps-2 align-middle"><a href="/profile" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
+                                    <td class="ps-2 align-middle"><a href="{{route('profiles.index')}}" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
                                     <td></td>
                                 </tr>
                             </tbody>
