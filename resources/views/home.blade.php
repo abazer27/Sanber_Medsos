@@ -42,7 +42,7 @@
                 </form>
             </div>
             <!-- post -->
-            @foreach ($post as $item)
+            @foreach ($posts as $item)
             <div class="mt-3">
                 <div class="card">
                     <div class="card-header bg-primary">
@@ -50,8 +50,14 @@
                             <tbody>
                                 <tr>
                                     <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 30px"></td>
-                                    <td class="ps-2 align-middle"><a href="/profile" class="text-light fs-6" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
-                                    <td class="text-end"><a href="" class="badge badge-danger">Hapus</a></td>
+                                    <td class="ps-2 align-middle col-4"><a href="/profile" class="text-light fs-6" style="text-decoration: none">{{Auth::user()->profile->nama}}</a></td>
+                                    <td>
+                                        <form action="/post/{{$item->id}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="badge badge-danger">Hapus</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -74,13 +80,13 @@
                                     <tbody>
                                         <tr>
                                             <td><img src="{{Auth::user()->profile->profile_image}}" class="rounded-circle" style="width: 30px"></td>
-                                            <td class="ps-2 align-middle"><a href="/profile" class="text-dark" style="text-decoration: none">{{ Auth::user()->name }}</a></td>
+                                            <td class="ps-2 align-middle"><a href="/profile" class="text-dark" style="text-decoration: none">{{Auth::user()->profile->nama}}</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam iure neque aut commodi iste, nesciunt exercitationem aperiam alias ea, soluta fuga excepturi voluptates deserunt illo. Asperiores neque in corrupti architecto!</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque illo odit, ipsam error neque ad animi aperiam fuga eum obcaecati quibusdam eaque, provident officiis. Fugit voluptate velit architecto facilis.</p>
                                 <button class="btn btn-primary btn-sm"><i class="fa fa-thumbs-o-up pe-1"></i>Suka</button>
                             </div>
                         </div>

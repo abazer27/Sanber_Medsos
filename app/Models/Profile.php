@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $fillable=['biodata', 'profile_image', 'user_id'];
+    protected $fillable=['nama', 'biodata', 'profile_image', 'user_id'];
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }
