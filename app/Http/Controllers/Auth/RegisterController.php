@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use App\profile;
+use App\follow;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -77,6 +78,11 @@ class RegisterController extends Controller
             'biodata' => 'BIODATA ANDA KOSONG',
             'profile_image' => 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
         ]);
+        $user->follow = Follow::create([
+            'user_id' => $user->id,
+            'follower' => 0,
+            'following' => 0
+            ]);
 
         return $user;
     }

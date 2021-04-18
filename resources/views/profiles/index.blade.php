@@ -26,8 +26,8 @@
                 @endguest
                 
             </tr>
-                <td class="p-2">Follower <br> Jumlah</td>
-                <td class="p-2">Following <br> Jumlah</td>
+                <td class="p-2">Follower <br> {{Auth::user()->follow->follower}}</td>
+                <td class="p-2">Following <br> {{Auth::user()->follow->following}}</td>
             <tr>
                 <td colspan="2">
                     <!-- post -->

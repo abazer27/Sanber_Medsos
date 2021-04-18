@@ -16,8 +16,8 @@
                             </tbody>
                         </table>
                     </li>
-                    <li class="list-group-item">Mengikuti <span class="text-end"> a</span></li>
-                    <li class="list-group-item">Pengikut</li>
+                    <li class="list-group-item">Mengikuti<br> {{Auth::user()->follow->follower}}</li>
+                    <li class="list-group-item">Pengikut<br> {{Auth::user()->follow->following}}</li>
                     <li class="list-group-item">Profile</li>
                 </ul>
             </div>

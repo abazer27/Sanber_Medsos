@@ -62,6 +62,10 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
+                                <form class="d-flex justify-content-between">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                                  </form>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('profiles.index')}}">Profile</a>
