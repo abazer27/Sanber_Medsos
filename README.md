@@ -1,8 +1,8 @@
 Kelompok 5
 
-Akbar Hazura Neldi
-Daniel Saputro
-Faishal Mahdi
+- Akbar Hazura Neldi
+- Daniel Saputro
+- Faishal Mahdi
 
 *branch daniel/daniel-base tidak bisa merge ke master kemungkinan beda versi laravel tapi source code kurang lebih sama
 
