@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\HTTP\Controllers\HomeController;
+use App\HTTP\Controllers\PostController;
+use App\HTTP\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,15 @@ use App\HTTP\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    if(Auth::check()){return Redirect::to('home');}
+    if(Auth::check()){return Redirect::to('post');}
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/post', [PostController::class, 'index'])->name('home');
 
-Route::get('/profile', [HomeController::class, 'show']);
+Route::resource('post', PostController::class);
+
+Route::resource('profile', ProfileController::class);
 
